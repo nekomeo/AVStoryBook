@@ -38,6 +38,7 @@
 }
 */
 
+#pragma mark - Photos
 - (IBAction)cameraButton:(UIButton *)sender
 {
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
@@ -52,8 +53,22 @@
         imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     }
     
+    imagePicker.delegate = self;
+    
     [self presentViewController:imagePicker animated:YES completion:nil];
 }
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    // Add the image to the image view
+    UIImage *selectedImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    self.storyImage.image = selectedImage;
+}
+
+#pragma mark - Microphone
 
 - (IBAction)micButton:(UIButton *)sender
 {

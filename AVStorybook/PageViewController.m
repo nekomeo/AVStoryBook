@@ -10,7 +10,7 @@
 //#import "SinglePageViewController.h"
 #import "StoryPartViewController.h"
 
-@interface PageViewController ()
+@interface PageViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @end
 
