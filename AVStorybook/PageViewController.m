@@ -7,7 +7,8 @@
 //
 
 #import "PageViewController.h"
-#import "SinglePageViewController.h"
+//#import "SinglePageViewController.h"
+#import "StoryPartViewController.h"
 
 @interface PageViewController ()
 
@@ -20,7 +21,8 @@
     
     self.dataSource = self;
     
-    SinglePageViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"single-page-view-controller"];
+//    SinglePageViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"single-page-view-controller"];
+    StoryPartViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"story-part-view-controller"];
     viewController.pageNumber = 1;
     [self setViewControllers:@[viewController] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
 }
@@ -42,26 +44,28 @@
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
 {
-    int previousPageNumber = ((SinglePageViewController *)viewController).pageNumber;
+    int previousPageNumber = ((StoryPartViewController *)viewController).pageNumber;
     if (previousPageNumber == 1)
     {
         return nil;
     }
     
-    SinglePageViewController *nextPageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"single-page-view-controller"];
+//    SinglePageViewController *nextPageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"single-page-view-controller"];
+    StoryPartViewController *nextPageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"story-part-view-controller"];
+    
     nextPageViewController.pageNumber = previousPageNumber-1;
     return nextPageViewController;
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {
-    int previousPageNumber = ((SinglePageViewController *)viewController).pageNumber;
+    int previousPageNumber = ((StoryPartViewController *)viewController).pageNumber;
     if (previousPageNumber == 5)
     {
         return nil;
     }
-    
-    SinglePageViewController *nextPageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"single-page-view-controller"];
+//    SinglePageViewController *nextPageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"single-page-view-controller"];
+    StoryPartViewController *nextPageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"story-part-view-controller"];
     nextPageViewController.pageNumber = previousPageNumber+1;
     return nextPageViewController;
 }

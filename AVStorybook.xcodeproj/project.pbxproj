@@ -13,9 +13,9 @@
 		6A4293E21F3E58DE00A99458 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A4293E01F3E58DE00A99458 /* Main.storyboard */; };
 		6A4293E41F3E58DE00A99458 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A4293E31F3E58DE00A99458 /* Assets.xcassets */; };
 		6A4293E71F3E58DE00A99458 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A4293E51F3E58DE00A99458 /* LaunchScreen.storyboard */; };
-		6A4293F01F3E5F6400A99458 /* StoryPartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A4293EF1F3E5F6400A99458 /* StoryPartViewController.m */; };
 		6A4293F31F3E636900A99458 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A4293F21F3E636900A99458 /* PageViewController.m */; };
 		6A4293F61F3E63BE00A99458 /* SinglePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A4293F51F3E63BE00A99458 /* SinglePageViewController.m */; };
+		6A4293F91F3E702700A99458 /* StoryPartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A4293F81F3E702700A99458 /* StoryPartViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,12 +29,12 @@
 		6A4293E31F3E58DE00A99458 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A4293E61F3E58DE00A99458 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A4293E81F3E58DE00A99458 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6A4293EE1F3E5F6400A99458 /* StoryPartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryPartViewController.h; sourceTree = "<group>"; };
-		6A4293EF1F3E5F6400A99458 /* StoryPartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryPartViewController.m; sourceTree = "<group>"; };
 		6A4293F11F3E636900A99458 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		6A4293F21F3E636900A99458 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
 		6A4293F41F3E63BE00A99458 /* SinglePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinglePageViewController.h; sourceTree = "<group>"; };
 		6A4293F51F3E63BE00A99458 /* SinglePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinglePageViewController.m; sourceTree = "<group>"; };
+		6A4293F71F3E702600A99458 /* StoryPartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoryPartViewController.h; path = ../StoryPartViewController.h; sourceTree = "<group>"; };
+		6A4293F81F3E702700A99458 /* StoryPartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoryPartViewController.m; path = ../StoryPartViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +76,8 @@
 				6A4293F51F3E63BE00A99458 /* SinglePageViewController.m */,
 				6A4293F11F3E636900A99458 /* PageViewController.h */,
 				6A4293F21F3E636900A99458 /* PageViewController.m */,
-				6A4293EE1F3E5F6400A99458 /* StoryPartViewController.h */,
-				6A4293EF1F3E5F6400A99458 /* StoryPartViewController.m */,
+				6A4293F71F3E702600A99458 /* StoryPartViewController.h */,
+				6A4293F81F3E702700A99458 /* StoryPartViewController.m */,
 				6A4293E31F3E58DE00A99458 /* Assets.xcassets */,
 				6A4293E51F3E58DE00A99458 /* LaunchScreen.storyboard */,
 				6A4293E81F3E58DE00A99458 /* Info.plist */,
@@ -170,7 +170,7 @@
 				6A4293DC1F3E58DE00A99458 /* AppDelegate.m in Sources */,
 				6A4293D91F3E58DE00A99458 /* main.m in Sources */,
 				6A4293F31F3E636900A99458 /* PageViewController.m in Sources */,
-				6A4293F01F3E5F6400A99458 /* StoryPartViewController.m in Sources */,
+				6A4293F91F3E702700A99458 /* StoryPartViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

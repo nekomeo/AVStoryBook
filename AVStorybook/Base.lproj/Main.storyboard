@@ -56,7 +56,7 @@
         <!--Story Part View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="StoryPartViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="story-part-view-controller" id="BYZ-38-t0r" customClass="StoryPartViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -75,14 +75,14 @@
                                 <rect key="frame" x="61" y="402" width="54" height="30"/>
                                 <state key="normal" title="Camera"/>
                                 <connections>
-                                    <action selector="cameraButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DzP-YA-5VN"/>
+                                    <action selector="cameraButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="roj-wc-Q7d"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkL-b7-l1q">
                                 <rect key="frame" x="257" y="402" width="82" height="30"/>
                                 <state key="normal" title="Microphone"/>
                                 <connections>
-                                    <action selector="microphoneButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PQO-uC-t4Z"/>
+                                    <action selector="micButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x0u-zf-UR6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -103,13 +103,16 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="sOc-um-HdH" id="qrv-0q-ER1"/>
+                        <outlet property="cameraButton" destination="8he-WK-hZF" id="WzQ-e6-44n"/>
+                        <outlet property="microphoneButton" destination="qkL-b7-l1q" id="Wue-L1-TOI"/>
+                        <outlet property="pageImage" destination="sOc-um-HdH" id="KIk-xW-e5o"/>
+                        <outlet property="storyImage" destination="sOc-um-HdH" id="oOj-ys-piH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="9ep-pJ-FbV"/>
             </objects>
-            <point key="canvasLocation" x="178" y="835"/>
+            <point key="canvasLocation" x="193" y="819"/>
         </scene>
     </scenes>
 </document>

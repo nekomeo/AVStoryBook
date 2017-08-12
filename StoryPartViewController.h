@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AVFoundation/AVFoundation.h>
 
-@interface StoryPartViewController : UIImagePickerController
+@interface StoryPartViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *pageImage;
+@property (nonatomic, assign) int pageNumber;
 
 @end
