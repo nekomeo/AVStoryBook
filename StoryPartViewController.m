@@ -7,11 +7,14 @@
 //
 
 #import "StoryPartViewController.h"
+@import AVFoundation;
 
 @interface StoryPartViewController ()
-@property (weak, nonatomic) IBOutlet UIImageView *storyImage;
+@property (strong, nonatomic) IBOutlet UIImageView *storyImage;
 @property (weak, nonatomic) IBOutlet UIButton *cameraButton;
 @property (weak, nonatomic) IBOutlet UIButton *microphoneButton;
+
+@property (nonatomic, strong) AVAudioPlayer *player;
 
 @end
 
@@ -19,8 +22,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.storyImage.image = [UIImage imageNamed:@"oreos"];
+    
+    // Placeholder image
+    self.storyImage.image = [UIImage imageNamed:@"cat"];
+    
+    [self audioSetup];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,10 +74,35 @@
     self.storyImage.image = selectedImage;
 }
 
-#pragma mark - Microphone
+#pragma mark - Audio
+
+- (void)audioSetup
+{
+    NSString *pathToFile = [[NSBundle mainBundle] resourcePath];
+    NSURL *urlToFile = [NSURL URLWithString:[NSString stringWithFormat:@"%@", pathToFile]];
+    
+    NSError *error = nil;
+    
+    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:urlToFile error:&error];
+    
+    if (error)
+    {
+        NSLog(@"Error with audio %@", error.localizedDescription);
+    }
+    else
+    {
+        NSLog(@"Success!");
+    }
+}
 
 - (IBAction)micButton:(UIButton *)sender
 {
+    [self.player play];
+}
+
+#pragma mark - Gestures
+
+- (IBAction)tapGesture:(UITapGestureRecognizer *)sender {
 }
 
 @end

@@ -10,7 +10,8 @@
 //#import "SinglePageViewController.h"
 #import "StoryPartViewController.h"
 
-@interface PageViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface PageViewController ()
+@property (nonatomic) NSArray *modelObjects;
 
 @end
 
@@ -20,6 +21,7 @@
     [super viewDidLoad];
     
     self.dataSource = self;
+    self.delegate = self;
     
 //    SinglePageViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"single-page-view-controller"];
     StoryPartViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"story-part-view-controller"];

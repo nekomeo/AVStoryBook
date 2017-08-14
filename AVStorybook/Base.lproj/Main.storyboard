@@ -71,16 +71,16 @@
                                     <constraint firstAttribute="height" constant="350" id="xSt-M1-a4P"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8he-WK-hZF">
-                                <rect key="frame" x="61" y="402" width="54" height="30"/>
-                                <state key="normal" title="Camera"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8he-WK-hZF">
+                                <rect key="frame" x="61" y="402" width="41" height="30"/>
+                                <state key="normal" title="Photo"/>
                                 <connections>
                                     <action selector="cameraButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="roj-wc-Q7d"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkL-b7-l1q">
-                                <rect key="frame" x="257" y="402" width="82" height="30"/>
-                                <state key="normal" title="Microphone"/>
+                                <rect key="frame" x="244" y="402" width="95" height="30"/>
+                                <state key="normal" title="Audio"/>
                                 <connections>
                                     <action selector="micButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x0u-zf-UR6"/>
                                 </connections>
@@ -110,7 +110,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="9ep-pJ-FbV"/>
+                <tapGestureRecognizer id="9ep-pJ-FbV">
+                    <connections>
+                        <action selector="tapGesture:" destination="BYZ-38-t0r" id="Vex-QJ-NYB"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="193" y="819"/>
         </scene>

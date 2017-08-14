@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StoryPartViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIImageView *pageImage;
+@interface StoryPartViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@property (strong, nonatomic) IBOutlet UIImageView *pageImage;
 @property (nonatomic, assign) int pageNumber;
 
 @end
